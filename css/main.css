@@ -2,6 +2,7 @@
 @import url("https://use.typekit.net/iou5yrw.css");
 html {
     font-size: 16pt;
+    scroll-behavior: smooth;
 }
 h1,h2,h3,h4,a {
     font-family: kopius,serif;
@@ -21,6 +22,7 @@ body {
 a {
     color: #D55A39;
     text-decoration:none;
+    transition: .15s ease all;
 }
 a:hover {
     text-decoration: underline;
@@ -48,22 +50,33 @@ h2 {
     list-style: none;
     display:flex;
     justify-content: space-around;
+    margin-left:5%;
 }
-button {
+.btn {
     background: none;
     font-size: 1rem;
     border:none;
     padding: 12px 120px;
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    transition: .15s ease all;
+}
+.btn:hover {
+    text-decoration: none;
+    cursor:pointer;
 }
 .btn-primary {
     background: #D55A39;
     color:white;
-    
 }
 .btn-outline.white {
     color:white;
     border: 4px solid white;
     text-transform: uppercase;
+}
+.btn-outline.white:hover {
+    color:#D55A39;
+    background:white;
 }
 .ptb-l {
     padding-top: 3rem;
@@ -88,7 +101,64 @@ button {
     max-width:60%;
 }
 
+.hand-container {
+    display: none;
+}
+.hero {
+    background:#D55A39;
+}
+.hero .img-container {
+    text-align: center;
+}
+.hero img {
+    max-height: 75vh;
+}
 
+#nav {
+    background:white;
+}
+.relative {
+    position: relative;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+.scroll-down-link {
+    color:white;
+    padding: 0px 100px 60px;
+    font-size: 1.75rem;
+}
+.white {
+    color:white;
+}
+.form-field * {
+    display: inline-block;
+}
+.form-field-label {
+    margin-right: 10px;
+    vertical-align: top;
+    font-size:1.25rem;
+    width:20%;
+}
+.form-field-input {
+    height:20px;
+    width: 60%;
+    font-size:1rem;
+    padding:8px;
+}
+.form-field textarea {
+    height: 75px;
+    width:60%;
+    font-size:1rem;
+    padding:8px;
+}
+.width-100 {
+    width:100%;
+}
 
 @media (min-width: 1280px) {
     html {
@@ -125,5 +195,15 @@ button {
     }
     .partner-logo {
         max-width: 40%;
+    }
+    .hand-container {
+        display:block;
+        position: absolute;
+        bottom:-6px;
+        left:0;
+        max-width: 800px;
+    }
+    .hand-mock {
+        margin:20vh 0px;
     }
 }
